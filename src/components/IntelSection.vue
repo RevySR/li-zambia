@@ -28,7 +28,7 @@ import { repositories, stats } from '../data/content'
 
     <p class="source-note">
       <img src="/assets/li-chief.jpg" alt="GitHub 头像" width="44" height="44" loading="lazy" decoding="async">
-      <span>数据抓取时间 2026-10-18 · 来源 github.com/shiptux 公开页面</span>
+      <span>数据核对时间 2026-10-25 · 来源 github.com/shiptux 公开页面</span>
     </p>
   </section>
 </template>

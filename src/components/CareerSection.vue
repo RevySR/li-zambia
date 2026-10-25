@@ -49,7 +49,7 @@
         <div class="when">技术底账</div>
         <div>
           <h3>把 DynamoRIO 搬到 RISC-V</h3>
-          <p><a class="repo" href="https://github.com/shiptux/dynamorio-riscv-port-memo" target="_blank" rel="noopener">dynamorio-riscv-port-memo</a> 记着移植路上的坑；<a class="repo" href="https://github.com/shiptux/tarsier-monthly" target="_blank" rel="noopener">tarsier-monthly</a> 则按月汇报 RISC-V 操作系统的进展。一个人撑起一条移植线和一份月报。</p>
+          <p><a class="repo" href="https://github.com/shiptux/dynamorio-riscv-port-memo" target="_blank" rel="noopener">dynamorio-riscv-port-memo</a> 还留着移植路上的笔记。动态二进制插桩遇到新指令集，坑都得一个一个记。</p>
           <span class="tag fact">有据可查</span>
         </div>
       </article>
@@ -62,11 +62,11 @@
         </div>
       </article>
       <article class="entry">
-        <div class="when">搬家</div>
+        <div class="when">新战线</div>
         <div>
-          <h3>把家当搬进 git</h3>
-          <p><a class="repo" href="https://github.com/shiptux/dotfiles" target="_blank" rel="noopener">dotfiles</a>：终端配置、编辑器配置、别名，全部版本化。换机器只需要一条命令，去非洲也一样。</p>
-          <span class="tag fact">有据可查</span>
+          <h3>从 RISC-V 到 FlagOS 工具链</h3>
+          <p>公开仓库里最近出现了 <a class="repo" href="https://github.com/shiptux/FlagTree" target="_blank" rel="noopener">FlagTree</a>、<a class="repo" href="https://github.com/shiptux/FlagGems" target="_blank" rel="noopener">FlagGems</a> 和 <a class="repo" href="https://github.com/shiptux/FlagCX" target="_blank" rel="noopener">FlagCX</a>：编译器、算子库、跨芯片通信，部长要看的 PR 又多了几个方向。</p>
+          <span class="tag fact">公开仓库 · 2026-10 核对</span>
         </div>
       </article>
       <article class="entry">

@@ -1,8 +1,8 @@
 export const stats = [
-  { label: '公开仓库', value: '60', note: '覆盖社区治理、RISC-V 移植、内核与配置' },
-  { label: '关注者', value: '63', note: '不多，但都是真人' },
-  { label: '关注中', value: '0', note: '从不回头，也不追热点' },
-  { label: '常驻地', value: '银河系', note: '主页地点栏的原话' },
+  { label: '公开仓库', value: '34', note: '覆盖 FlagOS、RISC-V、内核与系统移植' },
+  { label: '关注者', value: '64', note: '不多，但都是真人' },
+  { label: '关注中', value: '119', note: '从 0 到 119，终于开始回头了' },
+  { label: '常驻地', value: '银河系', note: '主页写着 Milky Way galaxy' },
 ]
 
 export const repositories = [
@@ -10,37 +10,37 @@ export const repositories = [
     name: 'community',
     url: 'https://github.com/shiptux/community',
     description: 'FlagOS 的社区治理、开发者贡献指南、贡献协议与社区交流。李部长的主场。',
-    meta: '治理 · 文档',
+    meta: '治理 · 文档 · Fork',
+  },
+  {
+    name: 'FlagTree',
+    url: 'https://github.com/shiptux/FlagTree',
+    description: '支持多种 AI 芯片后端的统一编译器，FlagOS 工具链的新战线。',
+    meta: '编译器 · C++ · Fork',
+  },
+  {
+    name: 'FlagGems',
+    url: 'https://github.com/shiptux/FlagGems',
+    description: '面向大语言模型的算子库，也是 FlagOS 算子生态的一员。',
+    meta: '算子库 · Python · Fork',
+  },
+  {
+    name: 'FlagCX',
+    url: 'https://github.com/shiptux/FlagCX',
+    description: '可扩展、自适应的跨芯片通信库，让不同 AI 芯片坐到同一张桌上开会。',
+    meta: '通信库 · C++ · Fork',
   },
   {
     name: 'dynamorio-riscv-port-memo',
     url: 'https://github.com/shiptux/dynamorio-riscv-port-memo',
     description: 'DynamoRIO 往 RISC-V 移植的笔记。动态二进制插桩遇到新指令集，坑都记在这里。',
-    meta: 'RISC-V · 插桩',
-  },
-  {
-    name: 'tarsier-monthly',
-    url: 'https://github.com/shiptux/tarsier-monthly',
-    description: 'RISC-V 操作系统的月度进展报告。月报这东西，坚持下来才算数。',
-    meta: '操作系统 · 月报',
+    meta: 'RISC-V · 移植笔记',
   },
   {
     name: 'hello_ko',
     url: 'https://github.com/shiptux/hello_ko',
     description: '一个内核模块版的 hello world。入门仪式，也是简历里的第一行。',
     meta: '内核模块 · C',
-  },
-  {
-    name: 'dotfiles',
-    url: 'https://github.com/shiptux/dotfiles',
-    description: '终端与开发环境配置。走到哪里，环境就跟到哪里。',
-    meta: '配置 · Shell',
-  },
-  {
-    name: 'shiptux.github.io',
-    url: 'https://github.com/shiptux/shiptux.github.io',
-    description: '个人主页的仓库已经建好了，站点还没上线，打开是 404。首页这件事，排期一直排在后面。',
-    meta: 'GitHub Pages · 待办',
   },
 ]
 
@@ -50,7 +50,7 @@ export const planks = [
   '给仓库提过 PR 的人到卢萨卡，一律用 <strong>Nshima（西玛）</strong> 招待，管饱。',
   '部落官方语言增加一门 <strong>C</strong>；文档先写英文，再补中文。',
   '维多利亚瀑布 Mosi-oa-Tunya（雷霆之雾）旁建一座<strong>自然水冷数据中心</strong>。',
-  '<strong>月报制度照旧</strong>，Tarsier 的进展一个月都不能停。',
+  '<strong>月报制度照旧</strong>，FlagOS 的进展一个月都不能停。',
 ]
 
 export const coronationJumps = [
