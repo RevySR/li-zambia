@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>这一页不在领地里</title>
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="5; url=/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230b100d'/%3E%3Cpath d='M5 22h22l-2-12-6 6-3-8-3 8-6-6z' fill='%23e09a4e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Noto+Sans+SC:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root {
+  --bg: #f1f4f0;
+  --fg: #101509;
+  --muted: #5c685a;
+  --line: rgba(16, 21, 9, .16);
+  --copper: #a85c17;
+  --flag-red: #c1272d;
+  --flag-black: #14100c;
+  --flag-orange: #e8842b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b100d; --fg: #eef1e9; --muted: #97a496;
+    --line: rgba(238, 241, 233, .2); --copper: #e09a4e;
+    --flag-red: #e05056; --flag-black: #070a08; --flag-orange: #f09a45;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b100d; --fg: #eef1e9; --muted: #97a496;
+  --line: rgba(238, 241, 233, .2); --copper: #e09a4e;
+  --flag-red: #e05056; --flag-black: #070a08; --flag-orange: #f09a45;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.75 "Noto Sans SC", -apple-system, "PingFang SC", system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(24px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px))
+           max(24px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+}
+main { max-width: 34rem; }
+.stripes { display: flex; height: 6px; width: 96px; margin-bottom: 1.6rem; }
+.stripes i { flex: 1; }
+.stripes i:nth-child(1) { background: var(--flag-red); }
+.stripes i:nth-child(2) { background: var(--flag-black); }
+.stripes i:nth-child(3) { background: var(--flag-orange); }
+h1 { font-family: "Noto Serif SC", "Songti SC", serif; font-weight: 900; font-size: clamp(2rem, 9vw, 3rem); line-height: 1.1; margin: 0 0 .8rem; text-wrap: balance; }
+p { margin: 0 0 1.4rem; color: var(--muted); }
+.count { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .7rem; font-size: .92rem; }
+.count b { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--copper); font-variant-numeric: tabular-nums; }
+.progress { height: 3px; width: min(14rem, 100%); background: var(--line); overflow: hidden; margin-bottom: 1.6rem; }
+.progress i { display: block; height: 100%; background: var(--copper); transform-origin: left; animation: fill 5s linear forwards; }
+@keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .progress i { animation: none; } }
+a {
+  display: inline-block;
+  background: var(--copper);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 11px 20px;
+  font-weight: 500;
+}
+code { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .86em; color: var(--copper); }
+</style>
+</head>
+<body>
+<main>
+  <div class="stripes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <h1>这一页不在领地里</h1>
+  <p>铜带省的辖区只覆盖能连上 Wi-Fi 的村落，这个地址显然在外面。回首页看看任命状。</p>
+  <p class="count"><b id="countdown">5</b><span>秒后自动回到首页</span></p>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <a href="/">立刻回首页</a>
+</main>
+<script>
+(function () {
+  var el = document.getElementById('countdown');
+  if (!el) return;
+  var left = 5;
+  var timer = setInterval(function () {
+    left -= 1;
+    el.textContent = left > 0 ? String(left) : '0';
+    if (left <= 0) clearInterval(timer);
+  }, 1000);
+})();
+</script>
+</body>
+</html>
